@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+   RewriteEngine on
+
+   RewriteRule ^$ /buyer [L]  
+   RewriteRule    (.*) buyer/webroot/$1 [L]
+   RewriteRule    maker/(.*) maker/webroot/$1 [L]
+   RewriteRule    watcher/(.*) watcher/webroot/$1 [L]
+</IfModule>
