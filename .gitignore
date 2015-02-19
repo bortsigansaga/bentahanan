@@ -25,3 +25,15 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+
+config/database.php
+buyer/webroot/img/uploads/*
+watcher/webroot/img/uploads/*
+maker/webroot/img/uploads/*
+user/pdata/*
+.merge_file*
+.htaccess
+user/Controller/TestController.php
+
+buyer/tmp/cache/models/*
+buyer/tmp/cache/persistent/*
