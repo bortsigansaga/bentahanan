@@ -38,7 +38,7 @@ class RegisterController extends AppController {
 			$session = $this->Session->write('register', $this->request->data['Register']);
 			
 			var_dump($this->User->validates());
-
+			var_dump($this->request->data);
 			exit;
 			if ($this->User->validates()) {
 				$hash = AuthComponent::password($this->request->data['Register']['password'].uniqid().date("His", time()));
@@ -124,7 +124,7 @@ class RegisterController extends AppController {
 				'fname' => $data['fname'],
 				'lname' => $data['lname'],
 				'midint' => $data['midInt'],
-				'email' => $data['emailAddr'],
+				'email' => $data['email'],
 				'address' => $data['homeAddr'],
 				'contact_no' => $data['contactNo'],
 				'password' => AuthComponent::password($data['password']),
@@ -144,7 +144,7 @@ class RegisterController extends AppController {
 	}
 
 	private function isEmailUnique($email) {
-		
+
 	}
 }
 

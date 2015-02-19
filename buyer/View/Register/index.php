@@ -113,7 +113,7 @@
 						<div class="input-group">
 		  				<span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user"></i>&nbsp;<span class="fillIn">*</span></span>
 							<?php
-								echo $this->Form->input('emailAddr', array(
+								echo $this->Form->input('email', array(
 										'type' => 'text',
 										'label' => false,
 										'class' => 'form-control',

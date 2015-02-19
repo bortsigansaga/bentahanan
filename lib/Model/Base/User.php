@@ -34,13 +34,13 @@ class User extends AppModel {
 							'message' => 'Please provide a contact number..'
 						)
 				),
-			'emailAddr' => array(
+			'email' => array(
 					'notEmpty' => array(
 							'rule' => 'notEmpty',
 							'message' => 'Email address must not be empty..'
 						),
 					'isUnique' => array(
-							'rule' => array('_isEmailUnique'),
+							'rule' => 'isUnique',
 							'message' => 'Email address provided already used..'
 						),
 					'code' => array(
@@ -99,9 +99,6 @@ class User extends AppModel {
 		
 		$validator = $this->validator();
 		unset($validator['password']);
-
-		
-		
 
 		if($this->validates()) {
 			$this->set($userData);
